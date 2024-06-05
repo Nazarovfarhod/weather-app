@@ -101,6 +101,8 @@ html {
 }
 .wrapper {
   display: flex;
+  justify-content: center;
+  padding-right: 45px;
   gap: 5px;
   max-width: 800px;
 }
