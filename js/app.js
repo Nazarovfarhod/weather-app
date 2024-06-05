@@ -5,8 +5,10 @@ const weatherIcon = document.getElementById("weather-icon");
 const overlay = document.getElementById("overlay");
 const btnEl = document.getElementById("btn");
 
-new Audio("./sounds/calm-weather.mp3").play();
-
+const weather = () => {
+  new Audio("./sounds/calm-weather.mp3").play();
+};
+weather();
 changeLocation.city.focus();
 
 // loader
