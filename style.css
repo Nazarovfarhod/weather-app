@@ -32,3 +32,12 @@ body {
   background: rgba(0, 0, 0, 0.5);
   top: 0;
 }
+
+form {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+}
+.button {
+  height: 50%;
+}
