@@ -3,6 +3,9 @@ const card = document.getElementById("card");
 const details = document.getElementById("details");
 const weatherIcon = document.getElementById("weather-icon");
 const overlay = document.getElementById("overlay");
+const btnEl = document.getElementById("btn");
+
+new Audio ('./sounds/bg-weather-sound-main.mp3').play()
 
 changeLocation.city.focus();
 
@@ -11,6 +14,7 @@ changeLocation.city.focus();
 function loader(state) {
   if (state) {
     overlay.classList.remove("d-none");
+    new Audio("./sounds/weather-bg-sound.mp3").play();
   } else {
     overlay.classList.add("d-none");
   }
@@ -48,4 +52,8 @@ changeLocation.addEventListener("submit", (e) => {
   const cityName = changeLocation.city.value.trim();
   changeLocation.reset();
   getWeather(cityName).then((data) => updateUI(data));
+});
+
+btnEl.addEventListener("click", () => {
+  new Audio("./sounds/click-sound.wav").play();
 });
