@@ -46,8 +46,10 @@ body {
 
 form {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   align-items: end;
+  justify-content: right;
 }
 .button {
   height: 50%;
@@ -87,4 +89,17 @@ html {
 
 .info {
   background-color: cyan;
+}
+
+.contex {
+  font-size: 16px;
+}
+
+.rus {
+  color: darkseagreen;
+}
+.wrapper {
+  display: flex;
+  gap: 5px;
+  max-width: 800px;
 }
