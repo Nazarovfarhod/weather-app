@@ -5,6 +5,8 @@ const weatherIcon = document.getElementById("weather-icon");
 const overlay = document.getElementById("overlay");
 const btnEl = document.getElementById("btn");
 
+changeLocation.city.focus();
+
 // loader
 
 function loader(state) {
@@ -48,7 +50,15 @@ changeLocation.addEventListener("submit", (e) => {
   e.preventDefault();
   const cityName = changeLocation.city.value.trim();
   changeLocation.reset();
-  getWeather(cityName).then((data) => updateUI(data));
+  getWeather(cityName)
+    .then((data) => updateUI(data))
+    .catch((err) => {
+      if (card.classList.contains("d-none")) {
+        card.classList.remove("d-none");
+      }
+      weatherIcon.src = "./images/sad-emoji.png";
+      details.innerHTML = err;
+    });
 });
 
 btnEl.addEventListener("click", () => {
