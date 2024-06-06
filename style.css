@@ -75,7 +75,6 @@ html {
 
 #bg-video {
   position: absolute;
-  object-fit: cover;
   top: 50%;
   left: 50%;
   min-width: 100%;

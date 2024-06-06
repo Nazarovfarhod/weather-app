@@ -5,17 +5,12 @@ const weatherIcon = document.getElementById("weather-icon");
 const overlay = document.getElementById("overlay");
 const btnEl = document.getElementById("btn");
 
-const weather = () => {
-  new Audio("./sounds/calm-weather.mp3").play();
-};
-weather();
-changeLocation.city.focus();
-
 // loader
 
 function loader(state) {
   if (state) {
     overlay.classList.remove("d-none");
+    new Audio("./sounds/calm-weather.mp3").play();
     new Audio("./sounds/weather-bg-sound.mp3").play();
   } else {
     overlay.classList.add("d-none");
